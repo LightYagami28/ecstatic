@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Page Title</title>
+
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="css/screen.css" />
+  <link rel="stylesheet" href="css/print.css" media="print" />
+</head>
+<body>
+  <div id="doc3" class="layout-container">
+    <main id="main-content">
+      <section id="maincol" class="content-column">
+        #{@_contents}
+      </section>
+    </main>
+
+    <aside id="sidebar" class="sidebar">
+      #{Ecstatic.mkmenu(@_nav, @_url)}
+    </aside>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# frozen_string_literal: true
+
+require 'rubygems'
+
+begin
+  # Create the gem specification
+  Gem::Specification.new do |gemspec|
+    gemspec.name          = 'ecstatic'
+    gemspec.version       = '0.0.0'
+    gemspec.summary       = 'Framework for maintaining a static website from templates and data in YAML files.'
+    gemspec.description   = 'Ecstatic is a framework for maintaining a static website from templates and data in YAML files.'
+    gemspec.email         = 'jgm@berkeley.edu'
+    gemspec.homepage      = 'https://github.com/jgm/cloudlib'
+    gemspec.authors       = ['John MacFarlane']
+    gemspec.has_rdoc      = true
+    gemspec.test_files    = []  # No test files were included, but you can add them
+    gemspec.files         = Dir.glob('**/*').reject { |f| f.match(/^(\.git|\.github)/) } # Excludes git files
+    gemspec.require_paths = ['lib']
+
+    # Add runtime dependencies
+    gemspec.add_runtime_dependency 'activesupport', '>= 6.0'
+    gemspec.add_runtime_dependency 'rake', '>= 13.0'
+    gemspec.add_runtime_dependency 'rpeg-markdown', '>= 0.2'
+    gemspec.add_runtime_dependency 'tenjin', '>= 0.6.1'
+  end
+rescue LoadError
+  puts 'Failed to create gemspec, please ensure RubyGems is installed correctly.'
+end

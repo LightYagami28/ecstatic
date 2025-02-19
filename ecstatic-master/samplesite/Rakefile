@@ -1,0 +1,25 @@
+require 'rake'
+require 'ecstatic'
+
+# Define the task for building the website
+Ecstatic::Site.new(
+  sitedir: "site",
+  layoutfile: "standard.rbhtml",
+  filesdir: "files",
+  modelsdir: "models",
+  sitetitle: "Demo",
+  templatesdir: ".",
+  datadir: ".",
+  navfile: "sitenav.yaml",
+  indexfile: "siteindex.yaml"
+).tasks
+
+# Set the default task
+task default: :website
+
+# Task to upload the website to a server
+desc "Upload website to server."
+task :upload => :website do
+  puts "Upload functionality not implemented!"
+  # Add your own uploading code here (e.g., using rsync or SCP)
+end

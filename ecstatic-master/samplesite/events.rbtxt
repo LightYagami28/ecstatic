@@ -1,0 +1,13 @@
+# Events
+
+Here is a list of recent events, most recent first:
+
+<% @events.sort_by(&:date).reverse.each do |event| %>
++ <%= "#{event.speaker}, #{event.title} (#{event.date.strftime('%B %d, %Y')})" %>
+<% end %>
+
+Oldest first, with a different date format:
+
+<% @events.sort_by(&:date).each do |event| %>
++ <%= "#{event.speaker}, #{event.title} (#{event.date.strftime('%m/%d/%y')})" %>
+<% end %>

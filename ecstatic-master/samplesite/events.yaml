@@ -1,0 +1,16 @@
+events:
+  - title: "Why Static Sites Are Best"
+    speaker: "Sam Spade"
+    date:
+      start: "2009-04-08"
+      end: "2009-04-09"
+
+  - title: "Ruby vs. Haskell"
+    speakers:
+      - "Sam Spade"
+      - "John Doe"
+    date: "2009-05-09"
+
+  - title: "Reading Books For Fun"
+    speaker: "Joseph Fong"
+    date: "2008-01-09"

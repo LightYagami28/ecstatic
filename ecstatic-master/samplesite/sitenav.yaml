@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Navigation Menu</title>
+
+<!-- External Stylesheets -->
+<link rel="stylesheet" href="css/screen.css" />
+<link rel="stylesheet" href="css/print.css" media="print" />
+</head>
+<body>
+<div id="menu-container" class="menu-container">
+<ul id="main-menu" class="menu-list">
+<!-- Main Menu -->
+<li><a href="index.html">Home</a></li>
+<li><a href="events.html">Events</a></li>
+
+<!-- Submenu Example -->
+<li>
+<a href="#">My Submenu</a>
+<ul class="submenu">
+<li><a href="food.html">Food</a></li>
+<li>
+<a href="#">Drinks</a>
+<ul class="submenu">
+<li><a href="wine.html">Wine</a></li>
+<li><a href="beer.html">Beer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</body>
+</html>
